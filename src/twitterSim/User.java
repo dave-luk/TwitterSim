@@ -107,6 +107,7 @@ public class User extends Observable implements UsersComposite, Observer
 		if (!followers.contains(u))
 		{
 			followers.add(u);
+			this.addObserver(u);
 		}
 	}
 
@@ -118,6 +119,7 @@ public class User extends Observable implements UsersComposite, Observer
 	public void addTweet(Tweet t)
 	{
 		tweets.add(t);
+		setChanged();
 		notifyObservers();
 	}
 
