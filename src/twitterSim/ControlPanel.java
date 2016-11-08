@@ -54,7 +54,7 @@ public class ControlPanel
 		return INSTANCE;
 	}
 
-	public void show()
+	public void open()
 	{
 		controlPanelFrame.setVisible(true);
 	}
@@ -477,11 +477,5 @@ public class ControlPanel
 			}
 		}
 
-	}
-
-	public static void main(String[] args)
-	{
-		ControlPanel cp = ControlPanel.getInstance();
-		cp.show();
 	}
 }
